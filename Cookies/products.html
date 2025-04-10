@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>Cookies!</header>
+    <div class="banner">
+        <img src="image1.jpg" class="active">
+        <img src="image2.jpg">
+        <img src="image3.jpg">
+    </div>
+    <section class="gallery">
+        <div class="card"><img src="cookie1.jpg"><h3>Cookie1</h3></div>
+        <div class="card"><img src="cookie2.jpg"><h3>Coco cookie</h3></div>
+        <div class="card"><img src="cookie3.jpg"><h3>Marshmallow Cookie</h3></div>
+        <div class="card"><img src="cookie4.jpg"><h3>Strawberry Cookie</h3></div>
+        <div class="card"><img src="cookie5.jpg"><h3>cookie5</h3></div>
+        <div class="card"><img src="cookie6.jpg"><h3>cookie6</h3></div>
+        <div class="card"><img src="cookie7.jpg"><h3>Coffee Cookie</h3></div>
+        <div class="card"><img src="cookie8.jpg"><h3>cookie8</h3></div>
+        <div class="card"><img src="cookie9.jpg"><h3>cookie9</h3></div>
+        <div class="card"><img src="cookie10.jpg"><h3>Red Velvet</h3></div>
+        <div class="card"><img src="cookie11.jpg"><h3>Vailla Cookie</h3></div>
+        <div class="card"><img src="cookie12.jpg"><h3>Blackberry Cookie</h3></div>
+        <div class="card"><img src="cookie13.jpg"><h3>Choco Chip</h3></div>
+    </section>
+    <a href="cookies.html" class="back-button">⬅ Back to Home</a>
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.banner img');
+        function showNextImage() {
+            images[index].style.display = 'none';
+            index = (index + 1) % images.length;
+            images[index].style.display = 'block';
+        }
+        setInterval(showNextImage, 3000);
+        images[0].style.display = 'block';
+    </script>
+</body>
+<style>
+    body {
+        background: url('Fondito.png') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Bangers', cursive;
+        text-align: center;
+        color: #000;
+        padding: 20px;
+    }
+    header {
+        font-size: 50px;
+        color: #ffcc00;
+        text-shadow: 4px 4px 0 black;
+        margin: 20px 0;
+    }
+    .banner {
+        width: 80%;
+        height: 400px;
+        margin: auto;
+        overflow: hidden;
+        border: 5px solid black;
+        box-shadow: 7px 7px 0 black;
+        position: relative;
+        border-radius: 10px;
+    }
+    .banner img {
+        width: 100%;
+        display: none;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        width: 90%;
+        margin: auto;
+    }
+    .card {
+        background: none;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.2s;
+        position: relative;
+        cursor: pointer;
+    }
+    .card img {
+        width: 320px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 0 black;
+    }
+    .card h3 {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(100%);
+        background: #ffcc00;
+        padding: 5px 10px;
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        border-radius: 10px;
+    }
+    .card:hover h3 {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        font-size: 24px;
+    }
+    .back-button {
+        margin-top: 30px;
+        font-size: 24px;
+        background: #ffcc00;
+        color: black;
+        border: 3px solid black;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: inline-block;
+        box-shadow: 5px 5px 0 black;
+        text-decoration: none;
+        transition: transform 0.2s;
+        border-radius: 10px;
+    }
+    .back-button:hover {
+        transform: scale(1.1);
+    }
+</style>
+</html>
