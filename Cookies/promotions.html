@@ -117,5 +117,32 @@
     .back-button:hover {
         transform: scale(1.1);
     }
+        @media (max-width: 500px) {
+        header {
+            font-size: 50px;
+            text-shadow: 3px 3px 0 #000, 6px 6px 0 #8a010c;
+        }
+
+        .promotions h2 {
+            font-size: 24px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .card {
+            height: 200px;
+            font-size: 20px;
+        }
+
+        .back-button {
+            width: 90%;
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
 </style>
 </html>
