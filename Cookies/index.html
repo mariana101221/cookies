@@ -158,6 +158,56 @@
         nav a:hover, #ver-mas:hover {
             animation: buttonPress 0.3s ease-out;
         }
+       @media (max-width: 500px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .hero-img {
+                height: 300px;
+                background-size: contain;
+            }
+
+            .tarjetas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tarjeta1,
+            .tarjeta2,
+            .tarjeta3 {
+                width: 90%;
+                height: 180px;
+            }
+
+            #ver-mas {
+                width: 80%;
+                margin: 0 auto 30px;
+            }
+
+            .comic-footer p {
+                font-size: 20px;
+            }
+
+            .redes {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .redes a {
+                font-size: 18px;
+            }
+        }
     </style>
 </body>
 </html>
